@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/estilo.css" />
+  <title>Bases de datos</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark"
+    style="font-family:Verdana, Geneva, Tahoma, sans-serif; font-weight: 600; font-size: 1.5rem;">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#create">C<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#read">R</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#update">U</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#delete">D</a>
+        </li>
+      </ul>
+      <span class="navbar-text"
+        style="font-family:'Courier New', Courier, monospace; font-style:italic; font-weight: 200;">
+        Victor Vargas - 1842274
+      </span>
+    </div>
+  </nav>
+  <div class="container" id="create">
+
+
+    <form id="contact" action="" method="post">
+      <h3 style="text-align: center;">Create</h3>
+      <h4>Enviar Pacientes</h4>
+      <fieldset>
+        <input placeholder="Nombre Paciente" name="nombre" type="text" tabindex="1" required autofocus>
+      </fieldset>
+      <fieldset>
+        <input placeholder="Apellido Paciente" name="apellido" type="text" tabindex="1" required autofocus>
+      </fieldset>
+      <fieldset>
+        <input placeholder="Id Paciente" name="identificacion" type="text" tabindex="2" required>
+      </fieldset>
+      <fieldset>
+        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+      </fieldset>
+    </form>
+  </div>
+
+
+  <div class="container-fluid h-100" style="justify-content: center; background-color: lightcoral;" id="read">
+    <hr>
+    <div class="row w-100 align-items-center">
+      <div class="col text-center">
+        <h1 style="color: white; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Consulta de Pacientes</h1>
+        <button type="button" class="btn btn-success mt-5 mb-3" id="consulta" onclick="traer()">Consultar</button>
+        <div class="mt-5">
+          <table class="table" style="background-color: white;">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Numid</th>
+              </tr>
+            </thead>
+            <tbody  id="tablacontenido" style="color: black; font-weight: 300; font-size: 1.2rem;">
+              <tr>
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container" id="update">
+    <form id="contact1" action="" method="put">
+      <h3 style="text-align: center;">Update</h3>
+      <h4>Actualizar Pacientes</h4>
+      <fieldset>
+        <input placeholder="Id" name="id" type="text" tabindex="1" required autofocus>
+      </fieldset>
+      <fieldset>
+        <input placeholder="Nombre Paciente" name="nombre" type="text" tabindex="1" required autofocus>
+      </fieldset>
+      <fieldset>
+        <input placeholder="Apellido Paciente" name="apellido" type="text" tabindex="1" required autofocus>
+      </fieldset>
+      <fieldset>
+        <input placeholder="Id Paciente" name="identificacion" type="text" tabindex="2" required>
+      </fieldset>
+      <fieldset>
+        <button name="submit" type="submit" id="contact1-submit" data-submit="...Sending">Submit</button>
+      </fieldset>
+    </form>
+  </div>
+
+  <div class="container" id="delete">
+    <form id="contact2" action="" method="delete">
+      <h3 style="text-align: center;">Delete</h3>
+      <h4>Eliminar Pacientes</h4>
+      <fieldset>
+        <input placeholder="Id" name="id" type="text" tabindex="1" required autofocus>
+      </fieldset>
+      <fieldset>
+        <button name="submit" type="submit" id="contact2-submit" data-submit="...Sending">Submit</button>
+      </fieldset>
+    </form>
+  </div>
+
+  <script src="app.js"></script>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
